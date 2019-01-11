@@ -37,31 +37,56 @@ public class QuakeSortInPlace {
 
     }
 
-    public void onePassBubbleSort(ArrayList<QuakeEntry> quakeData, int numSorted){
+    public void onePassBubbleSort(ArrayList<QuakeEntry> quakeData, int numSorted) {
 
 
-        for(int i = 0;i < (quakeData.size()-1)-numSorted;i++){
+        for (int i = 0; i < (quakeData.size() - 1) - numSorted; i++) {
 
             double cur = quakeData.get(i).getMagnitude();
-            double next = quakeData.get(i+1).getMagnitude();
-            if(cur > next){
+            double next = quakeData.get(i + 1).getMagnitude();
+            if (cur > next) {
                 QuakeEntry currQE = quakeData.get(i);
-                QuakeEntry nextQE = quakeData.get(i+1);
-                quakeData.set(i,nextQE);
-                quakeData.set(i + 1,currQE);
+                QuakeEntry nextQE = quakeData.get(i + 1);
+                quakeData.set(i, nextQE);
+                quakeData.set(i + 1, currQE);
             }
         }
     }
 
-    public void sortByMagnitudeWithBubbleSort(ArrayList<QuakeEntry> in){
+    boolean checkInSortedOrder(ArrayList<QuakeEntry> quakes) {
 
-        for (int i = 0; i < in.size()-1; i++) {
+
+        for (int i = 0; i < quakes.size() - 1; i++) {
+
+            QuakeEntry current = quakes.get(i);
+            QuakeEntry next = quakes.get(i + 1);
+
+            if (current.getMagnitude() > next.getMagnitude())
+                return false;
+        }
+
+        return true;
+    }
+
+    void sortByMagnitudeWithBubbleSortWithCheck(ArrayList<QuakeEntry> in){
+
+        for (int i = 0; i < in.size()-1 ; i++) {
+            onePassBubbleSort(in,i);
+            if(checkInSortedOrder(in))
+                break;
+        }
+
+    }
+
+    public void sortByMagnitudeWithBubbleSort(ArrayList<QuakeEntry> in) {
+
+        for (int i = 0; i < in.size() - 1; i++) {
             System.out.println("***************");
             System.out.println("after pass " + i);
             for (QuakeEntry quakeEntry : in) {
                 System.out.println(quakeEntry);
             }
-            onePassBubbleSort(in,i);
+            onePassBubbleSort(in, i);
         }
     }
 
@@ -74,22 +99,22 @@ public class QuakeSortInPlace {
             double currentDepth = quakeData.get(from).getDepth();
             double nextDepth = quakeData.get(from + 1).getDepth();
             if (currentDepth > nextDepth) {
-                 indexOfMaxDepth = from;
+                indexOfMaxDepth = from;
             }
         }
 
-        return  indexOfMaxDepth;
+        return indexOfMaxDepth;
     }
 
-    public void sortByLargestDepth(ArrayList<QuakeEntry> in){
+    public void sortByLargestDepth(ArrayList<QuakeEntry> in) {
 
         for (int i = 0; i < in.size(); i++) {
 
-             int indexMax = getLargestDepth(in,i);
-             QuakeEntry cur = in.get(i);
-             QuakeEntry max = in.get(indexMax);
-             in.set(i,max);
-             in.set(indexMax,cur);
+            int indexMax = getLargestDepth(in, i);
+            QuakeEntry cur = in.get(i);
+            QuakeEntry max = in.get(indexMax);
+            in.set(i, max);
+            in.set(indexMax, cur);
 
         }
 
@@ -99,13 +124,13 @@ public class QuakeSortInPlace {
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         String source = "C:\\Coding\\Java\\EarthquakeSortStarterProgram\\" +
-                          "data\\earthquakeDataSampleSix2.atom";
+                "data\\earthquakeDataSampleSix2.atom";
         //String source = "data/nov20quakedata.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
 
         System.out.println("read data for " + list.size() + " quakes");
-      //  sortByMagnitude(list);
-         sortByMagnitudeWithBubbleSort(list);
+        //  sortByMagnitude(list);
+        sortByMagnitudeWithBubbleSort(list);
         System.out.println("After sorting: ");
         for (QuakeEntry qe : list) {
             System.out.println(qe);

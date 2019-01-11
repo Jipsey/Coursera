@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03a8edf6-0205-4b65-947e-e8bc7c09187c" name="Default Changelist" comment="" />
+    <list default="true" id="03a8edf6-0205-4b65-947e-e8bc7c09187c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+            <state relative-caret-position="480">
+              <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
               <folding>
                 <element signature="method#getLargestDepth#0;class#QuakeSortInPlace#0" />
               </folding>
@@ -37,6 +41,9 @@
     <findStrings>
       <find>toLower</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -201,16 +208,18 @@
       <workItem from="1547110050731" duration="4957000" />
       <workItem from="1547235541974" duration="551000" />
       <workItem from="1547236997387" duration="130000" />
+      <workItem from="1547241452321" duration="867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187245000" />
+    <option name="totallyTimeSpent" value="188112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="0" width="840" height="832" extended-state="0" />
+    <frame x="-12" y="0" width="840" height="832" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2628205" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27051282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -766,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="108" column="43" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+        <state relative-caret-position="480">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
           <folding>
             <element signature="method#getLargestDepth#0;class#QuakeSortInPlace#0" />
           </folding>
