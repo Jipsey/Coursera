@@ -99,8 +99,8 @@ public class EarthQuakeParser {
         EarthQuakeParser xp = new EarthQuakeParser();
         //String source = "data/2.5_week.atom";
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-        String source = "data/nov20quakedata.atom";
-        String str = "C:\\Coding\\Java\\SearchingEarthquakeDataStarterProgram\\data\\nov20quakedata.atom";
+       // String source = "data/nov20quakedata.atom";
+       // String str = "C:\\Coding\\Java\\SearchingEarthquakeDataStarterProgram\\data\\nov20quakedata.atom";
         QuakeSortInPlace qsip = new QuakeSortInPlace();
         qsip.testSort();
     }

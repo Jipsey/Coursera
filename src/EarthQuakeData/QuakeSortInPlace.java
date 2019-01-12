@@ -16,10 +16,14 @@ public class QuakeSortInPlace {
     }
 
     public int getSmallestMagnitude(ArrayList<QuakeEntry> quakes, int from) {
-        int minIdx = from;
-        for (int i = from + 1; i < quakes.size(); i++) {
-            if (quakes.get(i).getMagnitude() < quakes.get(minIdx).getMagnitude()) {
-                minIdx = i;
+        int minIdx = -1;
+        double minMagn = Double.MAX_VALUE;
+
+        for (; from < quakes.size(); from++) {
+            double current = quakes.get(from).getMagnitude();
+            if (current < minMagn || minIdx == -1) {
+                minIdx = from;
+                minMagn = current;
             }
         }
         return minIdx;
@@ -40,7 +44,7 @@ public class QuakeSortInPlace {
     public void onePassBubbleSort(ArrayList<QuakeEntry> quakeData, int numSorted) {
 
 
-        for (int i = 0; i < (quakeData.size() - 1) - numSorted; i++) {
+        for (int i = 0; i < quakeData.size() - (numSorted + 1); i++) {
 
             double cur = quakeData.get(i).getMagnitude();
             double next = quakeData.get(i + 1).getMagnitude();
@@ -72,10 +76,11 @@ public class QuakeSortInPlace {
 
         for (int i = 0; i < in.size() - 1; i++) {
             onePassBubbleSort(in, i);
-            if (checkInSortedOrder(in))
+            if (checkInSortedOrder(in)) {
+                System.out.printf("we needed %s passes to sort \n", i + 1);
                 break;
+            }
         }
-
     }
 
     public void sortByMagnitudeWithBubbleSort(ArrayList<QuakeEntry> in) {
@@ -94,12 +99,14 @@ public class QuakeSortInPlace {
     public int getLargestDepth(ArrayList<QuakeEntry> quakeData, int from) {
 
         int indexOfMaxDepth = -1;
+        double maxDepth = Double.MIN_VALUE;
 
-        for (; from < quakeData.size() - 1; from++) {
+        for (; from < quakeData.size(); from++) {
+
             double currentDepth = quakeData.get(from).getDepth();
-            double nextDepth = quakeData.get(from + 1).getDepth();
-            if (currentDepth > nextDepth) {
+            if (currentDepth > maxDepth || indexOfMaxDepth == -1) {
                 indexOfMaxDepth = from;
+                maxDepth = currentDepth;
             }
         }
 
@@ -108,7 +115,7 @@ public class QuakeSortInPlace {
 
     public void sortByLargestDepth(ArrayList<QuakeEntry> in) {
 
-        for (int i = 0; i < in.size(); i++) {
+        for (int i = 0; i < 50; i++) {
 
             int indexMax = getLargestDepth(in, i);
             QuakeEntry cur = in.get(i);
@@ -117,6 +124,9 @@ public class QuakeSortInPlace {
             in.set(indexMax, cur);
 
         }
+
+        System.out.println("***********");
+        System.out.println("After 50 passes ");
 
     }
 
@@ -129,7 +139,7 @@ public class QuakeSortInPlace {
             in.set(i, qmin);
             in.set(minIdx, qi);
             if (checkInSortedOrder(in)) {
-                System.out.printf("we needed %s passes to sort \n",i+1);
+                System.out.printf("we needed %s passes to sort \n", i + 1);
                 break;
             }
         }
@@ -139,22 +149,24 @@ public class QuakeSortInPlace {
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         String source = "C:\\Coding\\Java\\EarthquakeSortStarterProgram\\" +
-                "data\\earthquakeDataSampleSix2.atom";
-        //String source = "data/nov20quakedata.atom";
+                "data\\earthQuakeDataDec6sample2.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
 
         System.out.println("read data for " + list.size() + " quakes");
         //  sortByMagnitude(list);
         //sortByMagnitudeWithBubbleSort(list);
         //sortByMagnitudeWithBubbleSortWithCheck(list);
-        sortByMagnitudeWithCheck(list);
-
+//        sortByMagnitudeWithCheck(list);
+//        sortByLargestDepth(list);
+//          sortByMagnitudeWithCheck(list);
+        sortByMagnitudeWithBubbleSortWithCheck(list);
         System.out.println("After sorting: ");
         for (QuakeEntry qe : list) {
             System.out.println(qe);
         }
 
     }
+
 
     public void createCSV() {
         EarthQuakeParser parser = new EarthQuakeParser();
