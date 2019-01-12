@@ -68,11 +68,11 @@ public class QuakeSortInPlace {
         return true;
     }
 
-    void sortByMagnitudeWithBubbleSortWithCheck(ArrayList<QuakeEntry> in){
+    void sortByMagnitudeWithBubbleSortWithCheck(ArrayList<QuakeEntry> in) {
 
-        for (int i = 0; i < in.size()-1 ; i++) {
-            onePassBubbleSort(in,i);
-            if(checkInSortedOrder(in))
+        for (int i = 0; i < in.size() - 1; i++) {
+            onePassBubbleSort(in, i);
+            if (checkInSortedOrder(in))
                 break;
         }
 
@@ -120,6 +120,21 @@ public class QuakeSortInPlace {
 
     }
 
+    void sortByMagnitudeWithCheck(ArrayList<QuakeEntry> in) {
+
+        for (int i = 0; i < in.size(); i++) {
+            int minIdx = getSmallestMagnitude(in, i);
+            QuakeEntry qi = in.get(i);
+            QuakeEntry qmin = in.get(minIdx);
+            in.set(i, qmin);
+            in.set(minIdx, qi);
+            if (checkInSortedOrder(in)) {
+                System.out.printf("we needed %s passes to sort \n",i+1);
+                break;
+            }
+        }
+    }
+
     public void testSort() {
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
@@ -130,7 +145,10 @@ public class QuakeSortInPlace {
 
         System.out.println("read data for " + list.size() + " quakes");
         //  sortByMagnitude(list);
-        sortByMagnitudeWithBubbleSort(list);
+        //sortByMagnitudeWithBubbleSort(list);
+        //sortByMagnitudeWithBubbleSortWithCheck(list);
+        sortByMagnitudeWithCheck(list);
+
         System.out.println("After sorting: ");
         for (QuakeEntry qe : list) {
             System.out.println(qe);
