@@ -149,7 +149,7 @@ public class QuakeSortInPlace {
         EarthQuakeParser parser = new EarthQuakeParser();
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         String source = "C:\\Coding\\Java\\EarthquakeSortStarterProgram\\" +
-                "data\\earthQuakeDataDec6sample2.atom";
+                "data\\earthQuakeDataWeekDec6sample2.atom";
         ArrayList<QuakeEntry> list = parser.read(source);
 
         System.out.println("read data for " + list.size() + " quakes");
@@ -160,7 +160,7 @@ public class QuakeSortInPlace {
 //        sortByLargestDepth(list);
 //          sortByMagnitudeWithCheck(list);
         sortByMagnitudeWithBubbleSortWithCheck(list);
-        System.out.println("After sorting: ");
+         System.out.println("After sorting: ");
         for (QuakeEntry qe : list) {
             System.out.println(qe);
         }
