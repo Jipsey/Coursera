@@ -2,28 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a8edf6-0205-4b65-947e-e8bc7c09187c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EarthQuakeData/DifferentSorters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EarthQuakeData/DistanceComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EarthQuakeData/MagnitudeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EarthQuakeData/TitleAndDepthComporator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EarthQuakeData/TitleLastAndMagnitudeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/alice.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/confucius.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/hawthorne.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/marseillaise.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/melville.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/merkel.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/obama.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/putin.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/data/romeo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovFour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EarthQuakeData/EarthQuakeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EarthQuakeData/EarthQuakeParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EarthQuakeData/QuakeEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EarthQuakeData/QuakeEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="218">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#318#319#0" expanded="true" />
@@ -50,11 +34,65 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="210">
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovFour.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,8 +150,11 @@
         <option value="$PROJECT_DIR$/src/EarthQuakeData/DifferentSorters.java" />
         <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovRunner.java" />
         <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Main.java" />
-        <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java" />
+        <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovFour.java" />
+        <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovModel.java" />
+        <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java" />
         <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java" />
+        <option value="$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java" />
       </list>
     </option>
   </component>
@@ -123,7 +164,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-15" />
     <option name="width" value="1050" />
     <option name="height" value="1040" />
@@ -133,7 +174,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,13 +200,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547590102190" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547639475942" />
     <property name="last_opened_file_path" value="C:/Coding/libraries/courserajava.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -297,16 +338,19 @@
       <workItem from="1547492371008" duration="3022000" />
       <workItem from="1547538224682" duration="4903000" />
       <workItem from="1547574495716" duration="14643000" />
+      <workItem from="1547591915146" duration="600000" />
+      <workItem from="1547619036940" duration="313000" />
+      <workItem from="1547631313165" duration="8062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229270000" />
+    <option name="totallyTimeSpent" value="238245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="0" width="840" height="832" extended-state="0" />
+    <frame x="-12" y="0" width="840" height="832" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32692307" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35384616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -315,7 +359,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32714286" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32714286" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38142857" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -408,12 +452,20 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java</url>
-          <line>33</line>
-          <properties class="PredictiveText.RandomTextStarterProgram.MarkovOne" method="getRandomText">
+          <url>file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovFour.java</url>
+          <line>35</line>
+          <properties class="PredictiveText.RandomTextStarterProgram.MarkovFour" method="getRandomText">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="89" />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java</url>
+          <line>23</line>
+          <properties class="PredictiveText.RandomTextStarterProgram.MarkovOne" method="setTextFromFile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/coursera/CharactersInPlay.java</url>
@@ -462,6 +514,11 @@
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
       <expression>
+        <expression-string>11</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>&quot;5&quot;</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -489,49 +546,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13484">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="415" lean-forward="true" selection-start-line="415" selection-end-line="415" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="590" selection-start-line="590" selection-end-line="590" />
-          <folding>
-            <element signature="e#21230#21231#0" expanded="true" />
-            <element signature="e#21262#21263#0" expanded="true" />
-            <element signature="e#23577#23578#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="247" selection-start-line="247" selection-end-line="247" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/coursera/CodonDNA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Coding/libraries/courserajava.jar!/edu/duke/TextIterable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -903,13 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -934,30 +941,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="15">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java">
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="120">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovZero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovOne.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="218">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#318#319#0" expanded="true" />
             <element signature="e#361#362#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
             <element signature="e#435#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovFour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/MarkovRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

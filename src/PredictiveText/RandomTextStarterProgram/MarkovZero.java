@@ -6,6 +6,8 @@ package PredictiveText.RandomTextStarterProgram;
  * @version 1.0
  */
 
+import edu.duke.FileResource;
+
 import java.util.Random;
 
 public class MarkovZero {
@@ -18,6 +20,16 @@ public class MarkovZero {
 	
 	public void setRandom(int seed){
 		myRandom = new Random(seed);
+	}
+
+	public void setTextFromFile() {
+
+		String str = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\" +
+				"RandomTextStarterProgram\\data\\confucius.txt";
+		FileResource fr = new FileResource(str);
+		myText = fr.asString()
+				.replace("\n", " ");
+		setTraining(myText);
 	}
 	
 	public void setTraining(String s){

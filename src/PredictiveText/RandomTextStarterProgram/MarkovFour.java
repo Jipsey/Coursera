@@ -5,11 +5,13 @@ import edu.duke.FileResource;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovOne {
+public class MarkovFour {
+
+
     private String myText;
     private Random myRandom;
 
-    public MarkovOne() {
+    public MarkovFour() {
         myRandom = new Random();
     }
 
@@ -21,10 +23,10 @@ public class MarkovOne {
         myText = s.trim();
     }
 
-    public void setTextFromFile(String fileName) {
+    public void setTextFromFile() {
 
         String str = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\" +
-                "RandomTextStarterProgram\\data\\" + fileName;
+                "RandomTextStarterProgram\\data\\confucius.txt";
         FileResource fr = new FileResource(str);
         myText = fr.asString()
                 .replace("\n", " ");
@@ -36,19 +38,22 @@ public class MarkovOne {
             return "";
         }
         ArrayList<String> follows;
-        StringBuilder sb = new StringBuilder();
-        int index = myRandom.nextInt(myText.length() - 1);
-        String key = myText.substring(index, index + 1);
+        StringBuffer sb = new StringBuffer();
+        StringBuilder sBuf = new StringBuilder();
+        int index = myRandom.nextInt(myText.length() - 4);
+        String key = myText.substring(index, index + 4);
         sb.append(key);
 
-        for (int k = 0; k < numChars - 1; k++) {
+        for (int k = 0; k < numChars - 4; k++) {
+
+            System.out.println(key);
             follows = getFollows(key);
             if (follows.size() == 0)
                 break;
             index = myRandom.nextInt(follows.size());
             String next = follows.get(index);
             sb.append(next);
-            key = next;
+            key = key.substring(1) + next;
         }
         return sb.toString();
     }
@@ -56,12 +61,17 @@ public class MarkovOne {
     public ArrayList<String> getFollows(String key) {
 
         ArrayList<String> arrayList = new ArrayList<>();
-        int i = 0;
+        int pos = 0;
+        int start;
 
-        while ((i = myText.indexOf(key, i)) != -1 &&
-                (i += key.length()) < myText.length()) {
-            String str = String.valueOf(myText.charAt(i));
+        while ((start = myText.indexOf(key, pos)) != -1 &&
+                (start + key.length()) < myText.length()) {
+
+            String str = myText.substring(start + key.length(),
+                    start + key.length() + 1);
+
             arrayList.add(str);
+            pos = start + key.length();
         }
         return arrayList;
     }
