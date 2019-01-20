@@ -10,10 +10,8 @@ import edu.duke.FileResource;
 
 import java.util.Random;
 
-public class MarkovZero {
-    private String myText;
-	private Random myRandom;
-	
+public class MarkovZero extends AbstractMarkovModel{
+
 	public MarkovZero() {
 		myRandom = new Random();
 	}
@@ -47,5 +45,11 @@ public class MarkovZero {
 		}
 		
 		return sb.toString();
+	}
+
+
+	public String toString(){
+		return "Markov model of order 0" ;
+
 	}
 }

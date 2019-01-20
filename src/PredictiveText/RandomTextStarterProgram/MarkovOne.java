@@ -5,9 +5,7 @@ import edu.duke.FileResource;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovOne {
-    private String myText;
-    private Random myRandom;
+public class MarkovOne extends AbstractMarkovModel{
 
     public MarkovOne() {
         myRandom = new Random();
@@ -53,16 +51,10 @@ public class MarkovOne {
         return sb.toString();
     }
 
-    public ArrayList<String> getFollows(String key) {
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        int i = 0;
+    public String toString(){
+        return "Markov model of order 1";
 
-        while ((i = myText.indexOf(key, i)) != -1 &&
-                (i += key.length()) < myText.length()) {
-            String str = String.valueOf(myText.charAt(i));
-            arrayList.add(str);
-        }
-        return arrayList;
     }
+
 }

@@ -5,10 +5,8 @@ import edu.duke.FileResource;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovModel {
+public class MarkovModel extends AbstractMarkovModel{
 
-        private String myText;
-        private Random myRandom;
         private int keySize;
 
     public MarkovModel(int keySize) {
@@ -34,13 +32,15 @@ public class MarkovModel {
         setTraining(myText);
     }
 
+        public int getKeySize(){
+        return keySize;
+        }
         public String getRandomText(int numChars) {
         if (myText == null) {
             return "";
         }
         ArrayList<String> follows;
-        StringBuffer sb = new StringBuffer();
-        StringBuilder sBuf = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         int index = myRandom.nextInt(myText.length() - keySize);
         String key = myText.substring(index, index + keySize);
         sb.append(key);
@@ -58,21 +58,8 @@ public class MarkovModel {
         return sb.toString();
     }
 
-        public ArrayList<String> getFollows(String key) {
+   public String toString(){
+        return "Markov model of order " + keySize;
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        int pos = 0;
-        int start;
-
-        while ((start = myText.indexOf(key, pos)) != -1 &&
-                (start + key.length()) < myText.length()) {
-
-            String str = myText.substring(start + key.length(),
-                    start + key.length() + 1);
-
-            arrayList.add(str);
-            pos = start + key.length();
-        }
-        return arrayList;
-    }
+   }
 }

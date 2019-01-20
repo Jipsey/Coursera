@@ -8,17 +8,32 @@ public class Tester {
 
     public static void main(String[] args) {
 
+       String path = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\RandomTextStarterProgram\\" +
+               "data\\confucius.txt";
+
+       FileResource fr = new FileResource(path);
+       String str = fr.asString()
+               .replace("\n"," ");
+
+       MarkovWordTwo mwt = new MarkovWordTwo();
+       mwt.setTraining(str);
+       mwt.setRandom(549);
+       System.out.println(mwt.getRandomText(40));
+    }
+}
+
+
 //        MarkovFour mf = new MarkovFour();
-          MarkovModel mm = new MarkovModel(8);
+//          MarkovModel mm = new MarkovModel(8);
 //          MarkovZero mz = new MarkovZero();
 /*
           mz.setRandom(88);
           mz.setTextFromFile();
         System.out.println(mz.getRandomText(65));
 */
-                  mm.setRandom(365);
-                  mm.setTextFromFile();
-        System.out.println(mm.getRandomText(65));
+//                  mm.setRandom(365);
+//                  mm.setTextFromFile();
+//        System.out.println(mm.getRandomText(65));
 /*
         mf.setRandom(371);
         mf.setTextFromFile();
@@ -38,5 +53,3 @@ public class Tester {
         System.out.println(list.size());
         System.out.println(list);
 */
-    }
-}

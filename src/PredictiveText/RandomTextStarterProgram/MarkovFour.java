@@ -5,11 +5,7 @@ import edu.duke.FileResource;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovFour {
-
-
-    private String myText;
-    private Random myRandom;
+public class MarkovFour extends AbstractMarkovModel{
 
     public MarkovFour() {
         myRandom = new Random();
@@ -46,7 +42,6 @@ public class MarkovFour {
 
         for (int k = 0; k < numChars - 4; k++) {
 
-            System.out.println(key);
             follows = getFollows(key);
             if (follows.size() == 0)
                 break;
@@ -58,21 +53,10 @@ public class MarkovFour {
         return sb.toString();
     }
 
-    public ArrayList<String> getFollows(String key) {
 
-        ArrayList<String> arrayList = new ArrayList<>();
-        int pos = 0;
-        int start;
+    public String toString(){
+        return "Markov model of order 4";
 
-        while ((start = myText.indexOf(key, pos)) != -1 &&
-                (start + key.length()) < myText.length()) {
-
-            String str = myText.substring(start + key.length(),
-                    start + key.length() + 1);
-
-            arrayList.add(str);
-            pos = start + key.length();
-        }
-        return arrayList;
     }
+
 }
