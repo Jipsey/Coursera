@@ -69,7 +69,6 @@ public class MarkovWordOne implements IMarkovModel {
             if (words[start].equals(target)) {
                 index = start;
                 return index;
-
             }
         }
         return index;

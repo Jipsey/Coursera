@@ -15,9 +15,15 @@ public class Tester {
        String str = fr.asString()
                .replace("\n"," ");
 
+       MarkovWordOne mwo = new MarkovWordOne();
+       mwo.setRandom(139);
+       mwo.setTraining(str);
+
+       System.out.println( mwo.getRandomText(50));
+
        MarkovWordTwo mwt = new MarkovWordTwo();
        mwt.setTraining(str);
-       mwt.setRandom(549);
+       mwt.setRandom(832);
        System.out.println(mwt.getRandomText(40));
     }
 }

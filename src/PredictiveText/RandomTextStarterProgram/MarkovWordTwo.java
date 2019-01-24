@@ -22,7 +22,7 @@ public class MarkovWordTwo implements IMarkovModel {
 
     public String getRandomText(int numWords) {
         StringBuilder sb = new StringBuilder();
-        int index1 = myRandom.nextInt(myText.length - 1);  // random word to start with
+        int index1 = myRandom.nextInt(myText.length - 2);  // random word to start with
         String key1 = myText[index1];
         String key2 = myText[index1 + 1];
         sb.append(key1).append(" ");
