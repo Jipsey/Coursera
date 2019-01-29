@@ -8,6 +8,8 @@ package PredictiveText.RandomTextStarterProgram;
 
 import edu.duke.*;
 
+import java.util.concurrent.TimeUnit;
+
 public class MarkovRunner {
 
 
@@ -73,4 +75,48 @@ public class MarkovRunner {
         System.out.println("\n----------------------------------");
     }
 
+    public void compareMethods() {
+
+        String path = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\RandomTextStarterProgram\\" +
+                "data\\hawthorne.txt";
+
+        FileResource fr = new FileResource(path);
+        String str = fr.asString()
+                .replace("\n", " ");
+
+
+        MarkovWord mw = new MarkovWord(2);
+        mw.setRandom(42);
+        mw.setTraining(str);
+
+        EfficientMarkovWord emw = new EfficientMarkovWord(2);
+        emw.setRandom(42);
+        emw.setTraining(str);
+
+
+        long current = System.nanoTime();
+        mw.getRandomText(100);
+        long worktime = System.nanoTime();
+
+        long result = TimeUnit.NANOSECONDS.toMillis(worktime-current);
+
+        System.out.println("MarkovWord .getRandom() method " + result + " milliseconds");
+
+        current = System.nanoTime();
+        emw.getRandomText(100);
+        worktime = System.nanoTime();
+        result = TimeUnit.NANOSECONDS.toMillis(worktime-current);
+
+
+        System.out.println("EfficientMarkovWord .getRandom() method " + result + " milliseconds");
+    }
+
+    public void testHashMap() {
+        EfficientMarkovWord effMW = new EfficientMarkovWord(2);
+        effMW.setRandom(42);
+        effMW.setTraining("this is a test yes this is really a test yes a test this is wow");
+        System.out.println(effMW.getRandomText(50));
+
+
+    }
 }

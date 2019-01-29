@@ -42,9 +42,7 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
 
             if (!mapFollows.containsKey(newKey))
                 mapFollows.put(newKey, new ArrayList<>());
-
         }
-
     }
 
     public String getRandomText(int numChars) {

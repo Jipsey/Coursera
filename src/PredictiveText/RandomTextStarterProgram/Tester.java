@@ -8,23 +8,29 @@ public class Tester {
 
     public static void main(String[] args) {
 
-       String path = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\RandomTextStarterProgram\\" +
-               "data\\confucius.txt";
+        String path = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\RandomTextStarterProgram\\" +
+                "data\\confucius.txt";
 
-       FileResource fr = new FileResource(path);
-       String str = fr.asString()
-               .replace("\n"," ");
+        FileResource fr = new FileResource(path);
+        String str = fr.asString()
+                .replace("\n", " ");
 
-       MarkovWordOne mwo = new MarkovWordOne();
-       mwo.setRandom(139);
-       mwo.setTraining(str);
 
-       System.out.println( mwo.getRandomText(50));
+        MarkovWord mw = new MarkovWord(3);
+        mw.setRandom(621);
+        mw.setTraining(str);
+        System.out.println(mw.getRandomText(50));
 
-       MarkovWordTwo mwt = new MarkovWordTwo();
-       mwt.setTraining(str);
-       mwt.setRandom(832);
-       System.out.println(mwt.getRandomText(40));
+// 1 - second opportunity to receive the work electronically in lieu  NOT CORRECT
+// 2 - ministers, and there was order below heaven. King Wu[80] said,
+// 3 - 30045
+// 4 - 376
+// 5
+
+//        MarkovWord mw = new MarkovWord(5);
+//        mw.setRandom(844);
+//        mw.setTraining(str);
+//        System.out.println(mw.getRandomText(60));
     }
 }
 

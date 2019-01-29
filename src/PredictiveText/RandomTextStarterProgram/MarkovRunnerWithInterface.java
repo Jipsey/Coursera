@@ -96,10 +96,8 @@ public class MarkovRunnerWithInterface {
         } catch (IOException e) {
 
         }
-
         return sb.toString();
     }
-
     private void printOut(String s) {
         String[] words = s.split("\\s+");
         int psize = 0;
