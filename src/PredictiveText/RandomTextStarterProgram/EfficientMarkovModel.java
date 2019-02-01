@@ -34,15 +34,28 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
 
         StringBuilder sb = new StringBuilder(myText);
         mapFollows.clear();
-
+        ArrayList<String> arrayList;
         for (int i = 0; i <= sb.length() - keySize;
              i++) {
 
             String newKey = sb.substring(i, i + keySize);
 
+
             if (!mapFollows.containsKey(newKey))
                 mapFollows.put(newKey, new ArrayList<>());
         }
+
+        for (int i = 0; i <= sb.length() - keySize; i++) {
+
+            String newKey = sb.substring(i, i + keySize);
+
+            if(mapFollows.containsKey(newKey)){
+                arrayList = getFollows(newKey);
+                mapFollows.put(newKey,arrayList);
+            }
+
+        }
+        printHashMapInfo();
     }
 
     public String getRandomText(int numChars) {
@@ -65,7 +78,6 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
             sb.append(next);
             key = key.substring(1) + next;
         }
-        printHashMapInfo();
         return sb.toString();
     }
 

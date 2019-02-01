@@ -34,11 +34,15 @@ public class MarkovRunner {
 
 
     public void runMarkovZero() {
-        FileResource fr = new FileResource();
+
+        String path = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\RandomTextStarterProgram\\" +
+                "data\\confucius.txt";
+
+        FileResource fr = new FileResource(path);
         String st = fr.asString();
         st = st.replace('\n', ' ');
         MarkovZero markov = new MarkovZero();
-        markov.setRandom(101);
+        markov.setRandom(1024);
         markov.setTraining(st);
         for (int k = 0; k < 3; k++) {
             String text = markov.getRandomText(500);
@@ -48,11 +52,14 @@ public class MarkovRunner {
 
     public void runMarkovOne() {
 
-        FileResource fr = new FileResource();
+
+        String path = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\RandomTextStarterProgram\\" +
+                "data\\romeo.txt";
+        FileResource fr = new FileResource(path);
         String st = fr.asString();
         st = st.replace('\n', ' ');
         MarkovOne markov = new MarkovOne();
-        markov.setRandom(101);
+        markov.setRandom(365);
         markov.setTraining(st);
         for (int k = 0; k < 3; k++) {
             String text = markov.getRandomText(500);
@@ -60,7 +67,7 @@ public class MarkovRunner {
         }
     }
 
-    private void printOut(String s) {
+    public void printOut(String s) {
         String[] words = s.split("\\s+");
         int psize = 0;
         System.out.println("----------------------------------");

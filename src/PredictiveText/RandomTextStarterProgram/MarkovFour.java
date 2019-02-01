@@ -22,7 +22,7 @@ public class MarkovFour extends AbstractMarkovModel{
     public void setTextFromFile() {
 
         String str = "C:\\Users\\Sanek\\IdeaProjects\\Coursera\\src\\PredictiveText\\" +
-                "RandomTextStarterProgram\\data\\confucius.txt";
+                "RandomTextStarterProgram\\data\\romeo.txt";
         FileResource fr = new FileResource(str);
         myText = fr.asString()
                 .replace("\n", " ");

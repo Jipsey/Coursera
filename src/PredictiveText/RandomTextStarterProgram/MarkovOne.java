@@ -29,6 +29,12 @@ public class MarkovOne extends AbstractMarkovModel{
         setTraining(myText);
     }
 
+    public void testGetFollowsWithFile(){
+
+      ArrayList<String > arr = getFollows("he");
+
+    }
+
     public String getRandomText(int numChars) {
         if (myText == null) {
             return "";

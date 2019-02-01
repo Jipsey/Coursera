@@ -47,7 +47,6 @@ public class MarkovWordOne implements IMarkovModel {
 
     private ArrayList<String> getFollows(String key) {
 
-        key.trim();
         ArrayList<String> follows = new ArrayList<>();
         int index = indexOf(myText,key,0);
         String followWord;
