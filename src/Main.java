@@ -1,14 +1,9 @@
-import BreakingTheVegenereCipher.VigenereBreaker;
-import EarthQuakeData.QuakeSortInPlace;
-
-import java.util.Random;
+import java.util.Properties;
 
 public class Main {
 
     public static void main(String[] args) {
-        QuakeSortInPlace qsip = new QuakeSortInPlace();
-        qsip.testSort();
-
+        System.out.println(System.getProperty("user.dir"));
     }
 
 }
