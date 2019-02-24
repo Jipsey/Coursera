@@ -76,15 +76,8 @@ public class FirstRating {
             String id = rater.getID();
             ArrayList<String> list = rater.getItemsRated();
             int i = rater.numRatings();
-
-           // System.out.println("The rater Id is: " + id + ". The number of the rating is: " + i);
-//            for (String movie_id : list) {
-//                System.out.println("[Movie_Id: " + movie_id + " -- rating by rater is: " +
-//                        rater.getRating(movie_id) + "]");
             }
-//            System.out.println("****************************************");
         }
-//    }
 
     public void findRater(String searchRater) {
 
@@ -97,10 +90,6 @@ public class FirstRating {
 
                 System.out.println("number of rated items by rater with Id "
                         + searchRater + " is " + list.size());
-//                for (int i = 0; i < list.size(); i++) {
-//                    String item = list.get(i);
-//                    System.out.println(item);
-//                }
             }
         }
     }
@@ -138,7 +127,6 @@ public class FirstRating {
             }
         }
         System.out.printf("Overall film %s has %s rates",entry_movie, raters.size());
-
     }
 
     public void findAllRatedFilms() {
@@ -198,18 +186,11 @@ public class FirstRating {
         ArrayList<Movie> movies =
                 loadMovies("ratedmoviesfull.csv");
         System.out.println("number of movies: " + movies.size());
-//        for (Movie mov : movies) {
-//            System.out.println(mov);
-//        }
         System.out.println("Movies longer than 150 minutes:" + listOfTimeFiltered.size());
         System.out.println("Movies of comedy genre: " + listOfComedy.size());
         System.out.println("Total directors: "+
                 directors.size());
         parseDirectors();
-        //
-//        for (Movie movie:listOfComedy){
-//            System.out.println(movie);
-//        }
     }
 
     static String makePath() {
