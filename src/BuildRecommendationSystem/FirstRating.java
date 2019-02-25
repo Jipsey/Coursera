@@ -38,25 +38,25 @@ public class FirstRating {
         return movies;
     }
 
-    public ArrayList<Rater> loadRaters(String filename) {
+    public ArrayList<PlainRater> loadRaters(String filename) {
 
-        ArrayList<Rater> arrayList = new ArrayList<>();
+        ArrayList<PlainRater> arrayList = new ArrayList<>();
         String path = makePath() + filename;
         FileResource fr = new FileResource(path);
         CSVParser parser = fr.getCSVParser();
-        Rater rater;
+        PlainRater plainRater;
 
         for (CSVRecord record : parser) {
 
-            rater = new Rater(record.get("rater_id"));
-            if (!arrayList.contains(rater)) {
-                rater.addRating(record.get("movie_id"),
+            plainRater = new PlainRater(record.get("rater_id"));
+            if (!arrayList.contains(plainRater)) {
+                plainRater.addRating(record.get("movie_id"),
                         Double.parseDouble(record.get("rating")));
-                arrayList.add(rater);
+                arrayList.add(plainRater);
             } else {
-                int index = arrayList.indexOf(rater);
-                rater = arrayList.get(index);
-                rater.addRating(record.get("movie_id"),
+                int index = arrayList.indexOf(plainRater);
+                plainRater = arrayList.get(index);
+                plainRater.addRating(record.get("movie_id"),
                         Double.parseDouble(record.get("rating")));
             }
         }
@@ -68,47 +68,47 @@ public class FirstRating {
         printRates(loadRaters("ratings.csv"));
     }
 
-    private void printRates(ArrayList<Rater> arrayList) {
+    private void printRates(ArrayList<PlainRater> arrayList) {
 
         System.out.println("Total numbers of raters: " + arrayList.size());
 
-        for (Rater rater : arrayList) {
-            String id = rater.getID();
-            ArrayList<String> list = rater.getItemsRated();
-            int i = rater.numRatings();
+        for (PlainRater plainRater : arrayList) {
+            String id = plainRater.getID();
+            ArrayList<String> list = plainRater.getItemsRated();
+            int i = plainRater.numRatings();
             }
         }
 
     public void findRater(String searchRater) {
 
-        ArrayList<Rater> raters = loadRaters("ratings.csv");
+        ArrayList<PlainRater> plainRaters = loadRaters("ratings.csv");
 
-        for (Rater rater : raters) {
-            if (rater.getID().equals(searchRater)) {
+        for (PlainRater plainRater : plainRaters) {
+            if (plainRater.getID().equals(searchRater)) {
 
-                ArrayList<String> list = rater.getItemsRated();
+                ArrayList<String> list = plainRater.getItemsRated();
 
-                System.out.println("number of rated items by rater with Id "
+                System.out.println("number of rated items by plainRater with Id "
                         + searchRater + " is " + list.size());
             }
         }
     }
 
     public void findMaximumNumberOfRatingByRater() {
-        ArrayList<Rater> raters = loadRaters("ratings.csv");
-        ArrayList<Rater> listOfRatesrMaxNumerOfRates = new ArrayList<>();
+        ArrayList<PlainRater> plainRaters = loadRaters("ratings.csv");
+        ArrayList<PlainRater> listOfRatesrMaxNumerOfRates = new ArrayList<>();
         int maxNumberOfRates = 0;
-        for (Rater rater : raters) {
-            int numRatings = rater.numRatings();
+        for (PlainRater plainRater : plainRaters) {
+            int numRatings = plainRater.numRatings();
             if (numRatings > maxNumberOfRates) {
                 maxNumberOfRates = numRatings;
             }
         }
         System.out.println("number of max ratings are " + maxNumberOfRates);
-        for (Rater rater : raters) {
-            if (rater.numRatings() == maxNumberOfRates) {
-                listOfRatesrMaxNumerOfRates.add(rater);
-                System.out.println("id rater with max ratings is id_" + rater.getID());
+        for (PlainRater plainRater : plainRaters) {
+            if (plainRater.numRatings() == maxNumberOfRates) {
+                listOfRatesrMaxNumerOfRates.add(plainRater);
+                System.out.println("id plainRater with max ratings is id_" + plainRater.getID());
             }
         }
         System.out.println("Raters with max qantity ratings " +
@@ -118,23 +118,23 @@ public class FirstRating {
 
     public void findRatesrByRatedFilm(String entry_movie) {
 
-        ArrayList<Rater> raters = loadRaters("ratings.csv");
-        //ArrayList<Rater> listRatersWithRateEntryFilm = new ArrayList<>();
-        for (Rater rater : raters) {
-            if (rater.hasRating(entry_movie)) {
-                //      listRatersWithRateEntryFilm.add(rater);
-               // System.out.println(rater.getID());
+        ArrayList<PlainRater> plainRaters = loadRaters("ratings.csv");
+        //ArrayList<PlainRater> listRatersWithRateEntryFilm = new ArrayList<>();
+        for (PlainRater plainRater : plainRaters) {
+            if (plainRater.hasRating(entry_movie)) {
+                //      listRatersWithRateEntryFilm.add(plainRater);
+               // System.out.println(plainRater.getID());
             }
         }
-        System.out.printf("Overall film %s has %s rates",entry_movie, raters.size());
+        System.out.printf("Overall film %s has %s rates",entry_movie, plainRaters.size());
     }
 
     public void findAllRatedFilms() {
-        ArrayList<Rater> raters = loadRaters("ratings.csv");
+        ArrayList<PlainRater> plainRaters = loadRaters("ratings.csv");
         ArrayList<String> listOfFilms = new ArrayList<>();
 
-        for (Rater rater : raters) {
-            ArrayList<String> ratedFilms = rater.getItemsRated();
+        for (PlainRater plainRater : plainRaters) {
+            ArrayList<String> ratedFilms = plainRater.getItemsRated();
             for (String film_id : ratedFilms) {
                if(!listOfFilms.contains(film_id))
                    listOfFilms.add(film_id);

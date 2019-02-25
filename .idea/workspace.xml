@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a8edf6-0205-4b65-947e-e8bc7c09187c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/PlainRater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/FirstRating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/MovieRunnerAverage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/Rater.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/Rating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/SecondRatings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/data/ratedmovies_short.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/data/ratedmoviesfull.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/data/ratings.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/data/ratings_short.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StepOneStarterProgram/stepOneTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/SecondRatings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/SecondRatings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,56 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Movie.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerAverage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -103,10 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EarthQuakeData/Filter.java" />
-        <option value="$PROJECT_DIR$/src/EarthQuakeData/PhraseFilter.java" />
-        <option value="$PROJECT_DIR$/src/EarthQuakeData/MatchAllFilter.java" />
-        <option value="$PROJECT_DIR$/src/EarthQuakeData/MagnitudeFilter.java" />
         <option value="$PROJECT_DIR$/src/EarthQuakeData/DepthFilter.java" />
         <option value="$PROJECT_DIR$/src/EarthQuakeData/LargestQuakes.java" />
         <option value="$PROJECT_DIR$/src/EarthQuakeData/EarthQuakeClient2.java" />
@@ -154,6 +100,10 @@
         <option value="$PROJECT_DIR$/src/StepOneStarterProgram/SecondRatings.java" />
         <option value="$PROJECT_DIR$/src/StepOneStarterProgram/stepOneTester.java" />
         <option value="$PROJECT_DIR$/src/StepOneStarterProgram/MovieRunnerAverage.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/PlainRater.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java" />
       </list>
     </option>
   </component>
@@ -211,7 +161,7 @@
     <property name="Repository.Attach.Sources" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551095507752" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551097847303" />
     <property name="last_opened_file_path" value="C:/Coding/libraries/apache_csv_source.zip!/org/apache/commons/csv" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -285,12 +235,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="stepOneTester (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BuildRecommendationSystem.stepOneTester" />
+    <configuration name="stepOneTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StepOneStarterProgram.stepOneTester" />
       <module name="Coursera" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BuildRecommendationSystem.*" />
+          <option name="PATTERN" value="StepOneStarterProgram.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -299,11 +249,11 @@
       </method>
     </configuration>
     <configuration name="stepOneTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StepOneStarterProgram.stepOneTester" />
+      <option name="MAIN_CLASS_NAME" value="BuildRecommendationSystem.stepOneTester" />
       <module name="Coursera" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StepOneStarterProgram.*" />
+          <option name="PATTERN" value="BuildRecommendationSystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -383,12 +333,12 @@
       <workItem from="1550952515225" duration="2847000" />
       <workItem from="1551023410771" duration="10661000" />
       <workItem from="1551094912550" duration="324000" />
-      <workItem from="1551095269213" duration="238000" />
+      <workItem from="1551095269213" duration="2392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="389715000" />
+    <option name="totallyTimeSpent" value="391854000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,10 +350,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="828" y="0" width="712" height="832" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.1624161" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49790794" visible="true" weight="0.37116563" />
       <window_info id="Structure" order="1" sideWeight="0.50209206" side_tool="true" weight="0.17248322" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -411,8 +360,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3201133" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32714286" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32285714" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36480686" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -733,14 +682,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Coding/libraries/commons-csv-1.6-sources.jar!/org/apache/commons/csv/CSVRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StepOneStarterProgram/RatetComparator.java" />
     <entry file="file://$PROJECT_DIR$/src/PredictiveText/RandomTextStarterProgram/EfficientMarkovModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1046,10 +987,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRating.java">
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerAverage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1060,31 +1001,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerAverage.java">
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/PlainRater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="607">
+          <caret line="73" selection-start-line="11" selection-end-line="73" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java">
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="82">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

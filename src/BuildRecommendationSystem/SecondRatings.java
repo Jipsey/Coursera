@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SecondRatings {
     private ArrayList<Movie> myMovies;
-    private ArrayList<Rater> myRaters;
+    private ArrayList<PlainRater> myPlainRaters;
 
     public SecondRatings() {
         this("ratedmoviesfull.csv", "ratings.csv");
@@ -13,7 +13,7 @@ public class SecondRatings {
     public SecondRatings(String moviefile, String ratingsfile) {
         FirstRating firstRating = new FirstRating();
         myMovies = firstRating.loadMovies(moviefile);
-        myRaters = firstRating.loadRaters(ratingsfile);
+        myPlainRaters = firstRating.loadRaters(ratingsfile);
     }
 
 
@@ -22,7 +22,7 @@ public class SecondRatings {
     }
 
     public int getRaterSize() {
-        return myRaters.size();
+        return myPlainRaters.size();
     }
 
     private double getAverageByID(String id, int minimalRaters) {
@@ -30,10 +30,10 @@ public class SecondRatings {
         double averageRating = 0.0;
 
         int counter = 0;
-        for (Rater rater : myRaters) {
-            if (rater.hasRating(id)) {
+        for (PlainRater plainRater : myPlainRaters) {
+            if (plainRater.hasRating(id)) {
                 counter++;
-                averageRating += rater.getRating(id);
+                averageRating += plainRater.getRating(id);
             }
         }
         if (counter != 0 && counter >= minimalRaters)

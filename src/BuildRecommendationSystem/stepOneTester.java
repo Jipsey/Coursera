@@ -8,6 +8,7 @@ public class stepOneTester {
 //        fr.testLoadRaters();
 //        fr.findMaximumNumberOfRatingByRater();
 //        fr.findAllRatedFilms();
+
         MovieRunnerAverage mra = new MovieRunnerAverage();
         mra.getAverageRatingOneMovie();
     }
