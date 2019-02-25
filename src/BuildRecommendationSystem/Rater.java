@@ -1,4 +1,4 @@
-package StepOneStarterProgram;
+package BuildRecommendationSystem;
 /**
  * Write a description of class Rater here.
  *

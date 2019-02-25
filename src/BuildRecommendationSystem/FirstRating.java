@@ -1,4 +1,4 @@
-package StepOneStarterProgram;
+package BuildRecommendationSystem;
 
 import edu.duke.*;
 import org.apache.commons.csv.*;

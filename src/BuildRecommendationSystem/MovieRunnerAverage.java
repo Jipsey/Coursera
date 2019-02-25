@@ -1,4 +1,4 @@
-package StepOneStarterProgram;
+package BuildRecommendationSystem;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package StepOneStarterProgram;
+package BuildRecommendationSystem;
 
 public class stepOneTester {
 

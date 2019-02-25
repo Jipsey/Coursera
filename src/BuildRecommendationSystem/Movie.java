@@ -1,7 +1,4 @@
-package StepOneStarterProgram;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+package BuildRecommendationSystem;
 
 // An immutable passive data object (PDO) to represent item data
 public class Movie {
