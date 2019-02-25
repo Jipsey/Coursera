@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class FirstRating {
+public class FirstRatings {
 
     private ArrayList<Movie> listOfComedy = new ArrayList();
     private ArrayList<Movie> listOfTimeFiltered = new ArrayList<>();

@@ -4,13 +4,16 @@ public class stepOneTester {
 
 
     public static void main(String[] args) {
-//        FirstRating fr = new FirstRating();
+//        FirstRatings fr = new FirstRatings();
 //        fr.testLoadRaters();
 //        fr.findMaximumNumberOfRatingByRater();
 //        fr.findAllRatedFilms();
 
-        MovieRunnerAverage mra = new MovieRunnerAverage();
-        mra.getAverageRatingOneMovie();
+//        MovieRunnerAverage mra = new MovieRunnerAverage();
+//        mra.getAverageRatingOneMovie();
+          MovieRunnerWithFilters mrwf = new MovieRunnerWithFilters();
+          mrwf.printAverageRatingsByDirectors();
+
     }
 
 }
