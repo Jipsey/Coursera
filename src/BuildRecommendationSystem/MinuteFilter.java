@@ -16,7 +16,7 @@ public class MinuteFilter implements Filter {
 
         int filmDuration = MovieDatabase.getMinutes(id);
 
-        return  filmDuration >= minMinutes && filmDuration <= maxMinutes;
+        return filmDuration >= minMinutes && filmDuration <= maxMinutes;
     }
 }
 

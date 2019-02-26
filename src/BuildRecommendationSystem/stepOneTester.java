@@ -12,7 +12,7 @@ public class stepOneTester {
 //        MovieRunnerAverage mra = new MovieRunnerAverage();
 //        mra.getAverageRatingOneMovie();
           MovieRunnerWithFilters mrwf = new MovieRunnerWithFilters();
-          mrwf.printAverageRatingsByDirectors();
+          mrwf.printAverageRatingsByDirectorsAndMinutes();
 
     }
 
