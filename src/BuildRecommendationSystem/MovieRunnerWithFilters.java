@@ -183,8 +183,5 @@ public class MovieRunnerWithFilters {
             System.out.printf("%s Time: %s %s\n\t%s\n ",
                     rating, minutes, title, directors);
         }
-
     }
-
-
 }

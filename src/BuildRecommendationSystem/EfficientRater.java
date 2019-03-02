@@ -2,7 +2,6 @@ package BuildRecommendationSystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class EfficientRater implements Rater {
 
@@ -29,10 +28,16 @@ public class EfficientRater implements Rater {
     }
 
     public double getRating(String item) {
-        for (int k = 0; k < myRatings.size(); k++) {
-            if (myRatings.get(k).getItem().equals(item)) {
-                return myRatings.get(k).getValue();
+
+        for(String id :myRatings.keySet()){
+            if (myRatings.get(id).getItem().equals(item)) {
+                return myRatings.get(id).getValue();
             }
+
+//        for (int k = 0; k < myRatings.size(); k++) {
+//            if (myRatings.get(k).getItem().equals(item)) {
+//                return myRatings.get(k).getValue();
+//            }
         }
 
         return -1;
