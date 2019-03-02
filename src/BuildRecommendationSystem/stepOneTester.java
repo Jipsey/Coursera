@@ -13,7 +13,7 @@ public class stepOneTester {
 //        mra.getAverageRatingOneMovie();
 //          MovieRunnerWithFilters mrwf = new MovieRunnerWithFilters();
           MovieRunnerSimilarRating mrsr = new MovieRunnerSimilarRating();
-          mrsr.printSimilarRatings();
+          mrsr.printSimilarRatingsByYearAfterAndMinutes();
 
     }
 

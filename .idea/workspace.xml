@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03a8edf6-0205-4b65-947e-e8bc7c09187c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/RaterDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerWithFilters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerWithFilters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,40 +20,16 @@
         <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java">
+        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="124" column="75" selection-start-line="124" selection-start-column="75" selection-end-line="124" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getAverageByID#0;class#FourthRating#0" />
-                <element signature="method#getAverageRatings#0;class#FourthRating#0" />
-                <element signature="method#getAverageRatingsByFilter#0;class#FourthRating#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/RaterDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+            <state relative-caret-position="353">
+              <caret line="216" column="11" lean-forward="true" selection-start-line="216" selection-start-column="11" selection-end-line="216" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,44 +38,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java">
+        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRatings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="60">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rating.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#154#155#0" expanded="true" />
+                <element signature="e#196#197#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,18 +115,18 @@
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/FirstRatings.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/GenreFilter.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorFilter.java" />
-        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieDatabase.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/MinuteFilter.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerWithFilters.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/ThirdRatings.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/Alarm.java" />
-        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/RaterDatabase.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/EfficientRater.java" />
-        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java" />
         <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java" />
+        <option value="$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java" />
       </list>
     </option>
   </component>
@@ -205,7 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,6 +180,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,20 +200,20 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\PredictiveText\RandomTextStarterProgram" />
-      <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src" />
-      <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\EarthQuakeData" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.coursera" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\BuildRecommendationSystem" />
       <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src" />
       <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\PredictiveText" />
       <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\EarthQuakeData" />
       <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\BreakingTheVegenereCipher" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.coursera" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\PredictiveText\RandomTextStarterProgram" />
+      <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src" />
+      <recent name="C:\Users\Sanek\IdeaProjects\Coursera\src\EarthQuakeData" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -454,12 +395,13 @@
       <workItem from="1551289534101" duration="7445000" />
       <workItem from="1551382783148" duration="5057000" />
       <workItem from="1551472446091" duration="5968000" />
-      <workItem from="1551519559200" duration="5201000" />
+      <workItem from="1551519559200" duration="6061000" />
+      <workItem from="1551526664684" duration="6187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433332000" />
+    <option name="totallyTimeSpent" value="440379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,8 +413,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="828" y="0" width="712" height="832" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49790794" weight="0.38343558" />
       <window_info id="Structure" order="1" sideWeight="0.50209206" side_tool="true" weight="0.17248322" />
@@ -483,8 +424,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32714286" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32142857" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3611898" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32285714" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -689,12 +630,28 @@
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java</url>
-          <line>94</line>
-          <properties class="BuildRecommendationSystem.FourthRating" method="getSimilarRatings">
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>113</line>
+          <properties class="BuildRecommendationSystem.MovieRunnerSimilarRating" method="printSimilarRatingsByGenre">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="173" />
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>154</line>
+          <properties class="BuildRecommendationSystem.MovieRunnerSimilarRating" method="printSimilarRatingsByGenreAndMinutes">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>193</line>
+          <properties class="BuildRecommendationSystem.MovieRunnerSimilarRating" method="printSimilarRatingsByYearAfterAndMinutes">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/coursera/CharactersInPlay.java</url>
@@ -787,10 +744,28 @@
           <option name="timeStamp" value="150" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java</url>
-          <line>131</line>
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>124</line>
           <properties />
-          <option name="timeStamp" value="167" />
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>204</line>
+          <properties />
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java</url>
+          <line>217</line>
+          <properties />
+          <option name="timeStamp" value="182" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -842,13 +817,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EarthQuakeData/QuakeSortInPlace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EarthQuakeData/QuakeEntry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -1026,28 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/GenreFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#196#197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/YearAfterFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1081,13 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1135,6 +1074,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/RaterDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Rater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1171,19 +1120,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieDatabase.java">
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="251">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAverageByID#0;class#FourthRating#0" />
+            <element signature="method#getAverageRatings#0;class#FourthRating#0" />
+            <element signature="method#getAverageRatingsByFilter#0;class#FourthRating#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/RaterDatabase.java">
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+        <state relative-caret-position="133">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/GenreFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
+          <folding>
+            <element signature="e#2909#2910#0" expanded="true" />
+            <element signature="e#2974#2975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/DirectorsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1191,26 +1183,16 @@
     <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/stepOneTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/MovieRunnerSimilarRating.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BuildRecommendationSystem/FourthRating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="124" column="75" selection-start-line="124" selection-start-column="75" selection-end-line="124" selection-end-column="75" />
+        <state relative-caret-position="353">
+          <caret line="216" column="11" lean-forward="true" selection-start-line="216" selection-start-column="11" selection-end-line="216" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getAverageByID#0;class#FourthRating#0" />
-            <element signature="method#getAverageRatings#0;class#FourthRating#0" />
-            <element signature="method#getAverageRatingsByFilter#0;class#FourthRating#0" />
           </folding>
         </state>
       </provider>

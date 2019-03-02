@@ -1,6 +1,7 @@
 package BuildRecommendationSystem;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MovieRunnerSimilarRating {
 
@@ -81,15 +82,148 @@ public class MovieRunnerSimilarRating {
         ArrayList<Rating> similarRaters =
                 fourthRatings.getSimilarRatings(raterID, numSimilarRaters, minimalRaters);
 
-        for (int i = 0; i < similarRaters.size(); i++) {
+        for (int i = 0; i < 5; i++) {
 
             String movieTitle = MovieDatabase
                     .getTitle(similarRaters.get(i).getItem());
 
             System.out.println(movieTitle);
 
-            if (movieTitle.equals("The Fault in Our Stars"))
-                System.out.println("============YES! It`s have!============");
         }
     }
+
+
+    private ArrayList<Rating> filterMovieList(String raterID, int minimalRaters, int numSimilarRaters, Filter filter) {
+
+        ArrayList<Rating> similarRaters =
+                fourthRatings.getSimilarRatings(raterID, numSimilarRaters, minimalRaters);
+
+        Iterator iterator = similarRaters.iterator();
+        while (iterator.hasNext()) {
+
+            Rating rating = (Rating) iterator.next();
+            String movieID = rating.getItem();
+            if (!filter.satisfies(movieID))
+                iterator.remove();
+        }
+
+        return similarRaters;
+    }
+
+
+    public void printSimilarRatingsByGenre() {
+
+
+        String raterID = "65";
+        int minimalRaters = 5;
+        int numSimilarRaters = 20;
+        GenreFilter genreFilter = new GenreFilter("Action");
+
+        ArrayList<Rating> similarRaters = filterMovieList(raterID, minimalRaters, numSimilarRaters, genreFilter);
+
+
+        for (int i = 0; i < 5; i++) {
+
+            String movieTitle = MovieDatabase
+                    .getTitle(similarRaters.get(i).getItem());
+
+            System.out.println(movieTitle);
+
+        }
+    }
+
+    public void printSimilarRatingsByDirector() {
+
+        String raterID = "1034";
+        int minimalRaters = 3;
+        int numSimilarRaters = 10;
+        DirectorsFilter directorFilter =
+                new DirectorsFilter("Clint Eastwood,Sydney Pollack,David Cronenberg,Oliver Stone");
+
+        ArrayList<Rating> similarRaters = filterMovieList(raterID, minimalRaters, numSimilarRaters, directorFilter);
+
+        for (int i = 0; i < 1; i++) {
+
+            String movieTitle = MovieDatabase
+                    .getTitle(similarRaters.get(i).getItem());
+
+            System.out.println(movieTitle);
+
+        }
+    }
+
+    public void printSimilarRatingsByGenreAndMinutes() {
+        String raterID = "65";
+        int minimalRaters = 5;
+        int numSimilarRaters = 10;
+        GenreFilter genreFilter = new GenreFilter("Adventure");
+        MinuteFilter minuteFilter = new MinuteFilter(100, 200);
+
+        ArrayList<Rating> similarRatersByGenre = filterMovieList(raterID, minimalRaters, numSimilarRaters, genreFilter);
+        ArrayList<Rating> similarRatersByMinutes = filterMovieList(raterID, minimalRaters, numSimilarRaters, minuteFilter);
+
+        for (Rating rating:similarRatersByGenre  ) {
+            System.out.println( MovieDatabase.getTitle( rating.getItem()));
+        }
+
+        System.out.println("================");
+        for (Rating rating:similarRatersByMinutes  ) {
+            System.out.println( MovieDatabase.getTitle( rating.getItem()));
+        }
+
+        Iterator iterator = similarRatersByGenre.iterator();
+
+        while (iterator.hasNext()) {
+
+            Rating rating = (Rating) iterator.next();
+            if (!similarRatersByMinutes.contains(rating))
+                iterator.remove();
+        }
+
+        for (int i = 0; i < 1; i++) {
+
+            String movieTitle = MovieDatabase
+                    .getTitle(similarRatersByGenre.get(i).getItem());
+
+            System.out.println(movieTitle);
+
+        }
+    }
+
+
+      public void printSimilarRatingsByYearAfterAndMinutes(){
+
+          String raterID = "65";
+          int minimalRaters = 5;
+          int numSimilarRaters = 10;
+          YearAfterFilter yearAfterFilter = new YearAfterFilter(2000);
+          MinuteFilter minuteFilter = new MinuteFilter(80, 100);
+
+          ArrayList<Rating> similarRatersByYear = filterMovieList(raterID, minimalRaters, numSimilarRaters, yearAfterFilter);
+          ArrayList<Rating> similarRatersByMinutes = filterMovieList(raterID, minimalRaters, numSimilarRaters, minuteFilter);
+
+          Iterator iterator = similarRatersByYear.iterator();
+
+          while (iterator.hasNext()) {
+              boolean flag = false;
+              Rating rating = (Rating) iterator.next();
+              String movieID = rating.getItem();
+              for (Rating r:similarRatersByMinutes) {
+                  if (r.getItem().equals(movieID))
+                      flag = true;
+              }
+              if(!flag)
+                  iterator.remove();
+          }
+          for (int i = 0; i < 1; i++) {
+
+              String movieTitle = MovieDatabase
+                      .getTitle(similarRatersByYear.get(i).getItem());
+
+              System.out.println(movieTitle);
+
+          }
+
+
+      }
 }

@@ -2,7 +2,7 @@ package BuildRecommendationSystem;
 
 public class DirectorsFilter implements Filter {
 
-    String directors;
+    private String directors;
 
     public DirectorsFilter(String directors) {
         this.directors = directors;
