@@ -13,14 +13,14 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
-public class RecomendationRunner implements Recommender {
+public class RecommendationRunner implements Recommender {
 
     private String ratingsfile;
     private String moviefile;
     private ArrayList<Rating> arrayList;
     private FourthRating fourthRating;
 
-    public RecomendationRunner() {
+    public RecommendationRunner() {
         ratingsfile = "ratings.csv";
         moviefile = "ratedmoviesfull.csv";
         fourthRating = new FourthRating(ratingsfile);
@@ -58,40 +58,8 @@ public class RecomendationRunner implements Recommender {
         ArrayList<Rating> similarRatings =
                 fourthRating.getSimilarRatings(webRaterID, 15, 5);
         HashMap<String, ArrayList<String>> movieGenreHashMap;
-
         Document doc;
-
         movieGenreHashMap = buildMapByGenre(webRaterID, similarRatings);
-
-        ArrayList<Rating> avg = fourthRating.getAverageRatings(5);
-
-        for (Map.Entry entry : movieGenreHashMap.entrySet()) {
-
-            //String genre = entry.getKey().toString();
-
-            System.out.println(entry.getKey());
-            ArrayList<String> list = (ArrayList<String>) entry.getValue();
-
-
-            for (String filmID : list) {
-
-                double averageRatingValue = 0;
-
-
-                for (Rating rat : avg) {
-                    if (filmID.equals(rat.getItem())) {
-
-                        averageRatingValue = new BigDecimal(rat.getValue())
-                                .setScale(2, RoundingMode.HALF_UP).doubleValue();
-                        break;
-                    }
-                }
-                System.out.printf("\t%s -- %s\n", MovieDatabase.getTitle(filmID), averageRatingValue);
-
-            }
-            System.out.println("---------------------------------");
-        }
-
 
         try {
 
@@ -133,10 +101,16 @@ public class RecomendationRunner implements Recommender {
         Element html = doc.createElement("html");// create html tag
         Element link = doc.createElement("link");
 
-        link.setAttribute("href", "www.leningrad.spb.ru");
-
+        link.setAttribute("href", "https://fonts.googleapis.com/css?family=Pridi");
+        link.setAttribute("rel","stylesheet");
         html.appendChild(link);
 
+        link = doc.createElement("link");
+        link.setAttribute("href","https://fonts.googleapis.com/css?family=Zilla+Slab");
+        link.setAttribute("rel","stylesheet");
+        html.appendChild(link);
+        Element styleElement = getStyleElements(doc);
+        html.appendChild(styleElement);
 
         for (Map.Entry entry : movieGenreHashMap.entrySet()) {
 
@@ -155,53 +129,40 @@ public class RecomendationRunner implements Recommender {
                 double averageRatingValue = getAverageFilmRating(filmID, avgRatingList);
 
                 String movieTitle = MovieDatabase.getTitle(filmID);
-                int filmMinutes = MovieDatabase.getMinutes(filmID);
+                int movieMinutes = MovieDatabase.getMinutes(filmID);
                 int movieYear = MovieDatabase.getYear(filmID);
                 String movieCountry = MovieDatabase.getCountry(filmID);
                 String posterLink = MovieDatabase.getPoster(filmID);
-                //Element em = doc.createElement("em");
-                Element li = doc.createElement("li");
+
+                if(posterLink.equals("N/A")) {
+                    posterLink = "http://icons.iconarchive.com/icons/danleech/simple/256/imdb-icon.png";
+                }
+                  //  posterLink = "https://trashbox.ru/apk_icons/topic_11831_192.png"; }
                 Element img = doc.createElement("img");
-                Element movie = doc.createElement("figure");
-                Element title = doc.createElement("filmtitle");
-                Element minutes = doc.createElement("minutes");
-                Element year = doc.createElement("year");
-                Element country = doc.createElement("country");
+                Element figure = doc.createElement("figure");
+                Element avg = doc.createElement("avg");
                 Element p = doc.createElement("p");
                 Element figcaption = doc.createElement("figcaption");
 
-                movie.setAttribute("class", "movie");
+                figure.setAttribute("class", "movie");
 
-                title.setTextContent(movieTitle);
-                year.setTextContent(String.valueOf(movieYear));
-                minutes.setTextContent(String.valueOf(filmMinutes) + " min ");
-                country.setTextContent(movieCountry);
                 img.setAttribute("src", posterLink);
-                img.setAttribute("width", "7%");
+                img.setAttribute("width", "30%");
 
                 p.appendChild(img);
-                movie.appendChild(p);
+                figure.appendChild(p);
 
-                figcaption.appendChild(title);
-                figcaption.appendChild(minutes);
-                figcaption.appendChild(year);
-                figcaption.appendChild(country);
+                avg.setTextContent(String.valueOf(averageRatingValue));
+                figcaption.setTextContent(String.valueOf(movieTitle));
+                figure.appendChild(avg);
+                figure.appendChild(figcaption);
+                figcaption = doc.createElement("figcaption");
+                figcaption.setTextContent(movieMinutes +" min, " + movieCountry + ", "+ movieYear);
 
-                movie.appendChild(figcaption);
-                Element avg = doc.createElement("avg");
+                figure.appendChild(figcaption);
 
-                //img.setTextContent(title);
-                li.appendChild(movie);
+                ul.appendChild(figure);
 
-
-//
-//                if (averageRatingValue != -1) {
-//                    avg.setTextContent("avgRating: " + averageRatingValue);
-//                    li.appendChild(avg);
-//                }
-
-               // em.appendChild(li);
-                ul.appendChild(li);
             }
 
             div.appendChild(h3);
@@ -211,6 +172,56 @@ public class RecomendationRunner implements Recommender {
 
         doc.appendChild(html);
         return doc;
+    }
+
+    private Element getStyleElements(Document document ){
+
+        String h3 = "h3\n" +
+                "{\n" +
+                "  margin:  20px 50px ;\n" +
+                "  text-shadow: 2px 2px 5px ;\n" +
+                "  font-family:\"Pridi\";\n" +
+                "  font-size:190%;\n" +
+                "}\n";
+
+        String div = "div{\n" +
+                "   margin:  0px 0px 0; /* Отступы */\n" +
+                "   display:block;\n" +
+                "   float: left;\n" +
+                "   border-style: solid;\n" +
+                "   background-color: ;\n" +
+                "   border-radius: 20px;  \n" +
+                "}\n";
+
+        String avg = "avg{\n" +
+                "     background-color: orange;    \n" +
+                "     display:block;\n" +
+                "     position:absolute;\n" +
+                "     font-family:\"Zilla Slab\";\n" +
+                "     border-style: solid;\n" +
+                "     border-radius: 5px;\n" +
+                "     border-width: 1px;\n" +
+                "     left:31%;\n" +
+                "     bottom:80.5%;\n" +
+                "     width:9%;\n" +
+                "    }\n";
+
+        String figure = "\n" +
+                "figure{\n" +
+                "    margin:  0 0 0; /* Отступы */\n" +
+                "    display: inline-block; /* Блочный элемент */\n" +
+                "    position:relative;\n" +
+                "    font-family:\"Pridi\";\n" +
+                "    font-size: 85%;\n" +
+                "    float: left; /* Блоки выстраиваются по горизонтали */\n" +
+                "    text-align: center; /* Выравнивание по центру */ \n" +
+                "}\n";
+
+
+        Element style = document.createElement("style");
+        style.setTextContent(h3+"\n" + div+"\n" + avg+"\n" +figure+"\n" );
+
+        return style;
     }
 
     private Document getXmlBuilder() throws Exception {

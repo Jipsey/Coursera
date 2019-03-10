@@ -102,11 +102,6 @@ public class FourthRating {
 
         for (String movieID : MovieDatabase.filterBy(new TrueFilter())) {
 
-//            String m = MovieDatabase.getTitle(movieID);
-//            if(m.equals("Interstellar")) {
-//                System.out.println(m);
-//                System.out.println(RaterDatabase.getRater(id).hasRating(movieID));
-//            }
             double rating = 0;
             int raterCounter = 0;
             for (Rating similarRater : similarityRaters) {

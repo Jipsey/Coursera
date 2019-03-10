@@ -14,7 +14,7 @@ public class stepOneTester {
 //          MovieRunnerWithFilters mrwf = new MovieRunnerWithFilters();
 //          MovieRunnerSimilarRating mrsr = new MovieRunnerSimilarRating();
 //          mrsr.printSimilarRatings();
-           RecomendationRunner rr = new RecomendationRunner();
+           RecommendationRunner rr = new RecommendationRunner();
            rr.printRecommendationsFor("65");
 
     }
