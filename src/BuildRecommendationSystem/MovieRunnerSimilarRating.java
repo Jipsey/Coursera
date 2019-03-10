@@ -98,6 +98,8 @@ public class MovieRunnerSimilarRating {
         ArrayList<Rating> similarRaters =
                 fourthRatings.getSimilarRatings(raterID, numSimilarRaters, minimalRaters);
 
+       // printList(similarRaters);
+
         Iterator iterator = similarRaters.iterator();
         while (iterator.hasNext()) {
 
@@ -148,7 +150,6 @@ public class MovieRunnerSimilarRating {
                     .getTitle(similarRaters.get(i).getItem());
 
             System.out.println(movieTitle);
-
         }
     }
 
@@ -160,32 +161,31 @@ public class MovieRunnerSimilarRating {
         MinuteFilter minuteFilter = new MinuteFilter(100, 200);
 
         ArrayList<Rating> similarRatersByGenre = filterMovieList(raterID, minimalRaters, numSimilarRaters, genreFilter);
+
+        printList(similarRatersByGenre);
+
         ArrayList<Rating> similarRatersByMinutes = filterMovieList(raterID, minimalRaters, numSimilarRaters, minuteFilter);
 
-        for (Rating rating:similarRatersByGenre  ) {
-            System.out.println( MovieDatabase.getTitle( rating.getItem()));
-        }
-
-        System.out.println("================");
-        for (Rating rating:similarRatersByMinutes  ) {
-            System.out.println( MovieDatabase.getTitle( rating.getItem()));
-        }
+        printList(similarRatersByMinutes);
 
         Iterator iterator = similarRatersByGenre.iterator();
 
         while (iterator.hasNext()) {
 
             Rating rating = (Rating) iterator.next();
+
+            String title = MovieDatabase.getTitle(rating.getItem());
             if (!similarRatersByMinutes.contains(rating))
                 iterator.remove();
         }
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < similarRatersByGenre.size(); i++) {
 
             String movieTitle = MovieDatabase
                     .getTitle(similarRatersByGenre.get(i).getItem());
 
             System.out.println(movieTitle);
+            System.out.println("\t weighted average " + similarRatersByGenre.get(i).getValue());
 
         }
     }
@@ -205,25 +205,31 @@ public class MovieRunnerSimilarRating {
           Iterator iterator = similarRatersByYear.iterator();
 
           while (iterator.hasNext()) {
-              boolean flag = false;
+
               Rating rating = (Rating) iterator.next();
-              String movieID = rating.getItem();
-              for (Rating r:similarRatersByMinutes) {
-                  if (r.getItem().equals(movieID))
-                      flag = true;
-              }
-              if(!flag)
-                  iterator.remove();
+              if(!similarRatersByMinutes.contains(rating))
+                   iterator.remove();
           }
           for (int i = 0; i < 1; i++) {
-
-              String movieTitle = MovieDatabase
-                      .getTitle(similarRatersByYear.get(i).getItem());
+              String movieID = similarRatersByYear.get(i).getItem();
+              String movieTitle = MovieDatabase.getTitle(movieID);
+              int year = MovieDatabase.getYear(movieID);
+              int minutes = MovieDatabase.getMinutes(movieID);
+              double wgtAvgRating = similarRatersByYear.get(i).getValue();
 
               System.out.println(movieTitle);
+              System.out.printf("year: %s duration: %s minutes  rating: %s",year,minutes,wgtAvgRating);
 
           }
+      }
 
+
+      public void printList(ArrayList<Rating> list){
+
+          for(Rating r:list){
+              System.out.println( MovieDatabase.getTitle(r.getItem()));
+          }
 
       }
 }
+

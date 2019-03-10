@@ -3,7 +3,7 @@ package BuildRecommendationSystem;
 public class stepOneTester {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 //        FirstRatings fr = new FirstRatings();
 //        fr.testLoadRaters();
 //        fr.findMaximumNumberOfRatingByRater();
@@ -12,8 +12,10 @@ public class stepOneTester {
 //        MovieRunnerAverage mra = new MovieRunnerAverage();
 //        mra.getAverageRatingOneMovie();
 //          MovieRunnerWithFilters mrwf = new MovieRunnerWithFilters();
-          MovieRunnerSimilarRating mrsr = new MovieRunnerSimilarRating();
-          mrsr.printSimilarRatingsByYearAfterAndMinutes();
+//          MovieRunnerSimilarRating mrsr = new MovieRunnerSimilarRating();
+//          mrsr.printSimilarRatings();
+           RecomendationRunner rr = new RecomendationRunner();
+           rr.printRecommendationsFor("65");
 
     }
 

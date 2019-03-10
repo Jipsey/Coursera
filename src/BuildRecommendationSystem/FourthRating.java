@@ -8,7 +8,6 @@ public class FourthRating {
 
     public FourthRating(String ratingsfile) {
         RaterDatabase.initialize(ratingsfile);
-        //MovieDatabase.initialize(ratingsfile);
     }
 
     private double getAverageByID(String id, int minimalRaters) {
@@ -98,10 +97,16 @@ public class FourthRating {
         ArrayList<Rating> movieArrayList = new ArrayList<>();
 
         ArrayList<Rating> similarityRaters = getSimilarities(id);
+
         similarityRaters = new ArrayList<>(similarityRaters.subList(0, numSimilarRaters));
 
         for (String movieID : MovieDatabase.filterBy(new TrueFilter())) {
 
+//            String m = MovieDatabase.getTitle(movieID);
+//            if(m.equals("Interstellar")) {
+//                System.out.println(m);
+//                System.out.println(RaterDatabase.getRater(id).hasRating(movieID));
+//            }
             double rating = 0;
             int raterCounter = 0;
             for (Rating similarRater : similarityRaters) {
@@ -114,11 +119,12 @@ public class FourthRating {
 
                     rating += index * movieRating;
                     raterCounter++;
-
                 }
             }
-            if (raterCounter >= minimalRaters &&
-                    !RaterDatabase.getRater(id).hasRating(movieID)) {
+
+//            if (raterCounter >= minimalRaters &&
+//                    !RaterDatabase.getRater(id).hasRating(movieID))
+            if (raterCounter >= minimalRaters) {
 
                 double wghtAvgMovieRating = rating / raterCounter; // weighted average rating
                 Rating movieRating = new Rating(movieID, wghtAvgMovieRating); // Rating for Movie

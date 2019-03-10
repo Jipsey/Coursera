@@ -31,4 +31,14 @@ public class Rating implements Comparable<Rating> {
         
         return 0;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Rating rating = (Rating) obj;
+        if(rating == this)
+            return true;
+
+        return rating.getItem().equals(this.getItem());
+
+    }
 }

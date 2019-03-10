@@ -17,7 +17,6 @@ public class MovieRunnerWithFilters {
         moviefile = "ratedmoviesfull.csv";
         thirdRatings = new ThirdRatings(ratingsfile);
         MovieDatabase.initialize(moviefile);
-
     }
 
 
