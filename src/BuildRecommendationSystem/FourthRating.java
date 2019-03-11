@@ -98,7 +98,7 @@ public class FourthRating {
 
         ArrayList<Rating> similarityRaters = getSimilarities(id);
 
-        if(similarityRaters.size() >= numSimilarRaters)
+        if(similarityRaters.size() > numSimilarRaters)
         similarityRaters = new ArrayList<>(similarityRaters.subList(0, numSimilarRaters));
 
         for (String movieID : MovieDatabase.filterBy(new TrueFilter())) {
@@ -125,7 +125,6 @@ public class FourthRating {
                 double wghtAvgMovieRating = rating / raterCounter; // weighted average rating
                 Rating movieRating = new Rating(movieID, wghtAvgMovieRating); // Rating for Movie
                 movieArrayList.add(movieRating);
-
             }
         }
 

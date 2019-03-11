@@ -98,83 +98,107 @@ public class RecommendationRunner implements Recommender {
         Document doc = getXmlBuilder();
         ArrayList<Rating> avgRatingList = fourthRating.getAverageRatings(5);
 
+        Element oops = doc.createElement("oops");
+
         Element html = doc.createElement("html");// create html tag
         Element link = doc.createElement("link");
 
         link.setAttribute("href", "https://fonts.googleapis.com/css?family=Pridi");
-        link.setAttribute("rel","stylesheet");
+        link.setAttribute("rel", "stylesheet");
         html.appendChild(link);
 
         link = doc.createElement("link");
-        link.setAttribute("href","https://fonts.googleapis.com/css?family=Zilla+Slab");
-        link.setAttribute("rel","stylesheet");
+        link.setAttribute("href", "https://fonts.googleapis.com/css?family=Zilla+Slab");
+        link.setAttribute("rel", "stylesheet");
         html.appendChild(link);
         Element styleElement = getStyleElements(doc);
         html.appendChild(styleElement);
 
-        for (Map.Entry entry : movieGenreHashMap.entrySet()) {
+        if (movieGenreHashMap.size() != 0) {
+            for (Map.Entry entry : movieGenreHashMap.entrySet()) {
 
-            String genre = entry.getKey().toString();
-            Element div = doc.createElement("div");
-            div.setAttribute("class", genre);
-            Element h3 = doc.createElement("h3");
-            h3.setTextContent(genre);
-            Element ul = doc.createElement("ul");
+                String genre = entry.getKey().toString();
+                Element div = doc.createElement("div");
+                div.setAttribute("class", genre);
+                Element h3 = doc.createElement("h3");
+                h3.setTextContent(genre);
+                Element ul = doc.createElement("ul");
 
 
-            ArrayList<String> list = (ArrayList<String>) entry.getValue();
+                ArrayList<String> list = (ArrayList<String>) entry.getValue();
 
-            for (String filmID : list) {
+                for (String filmID : list) {
 
-                double averageRatingValue = getAverageFilmRating(filmID, avgRatingList);
+                    double averageRatingValue = getAverageFilmRating(filmID, avgRatingList);
 
-                String movieTitle = MovieDatabase.getTitle(filmID);
-                int movieMinutes = MovieDatabase.getMinutes(filmID);
-                int movieYear = MovieDatabase.getYear(filmID);
-                String movieCountry = MovieDatabase.getCountry(filmID);
-                String posterLink = MovieDatabase.getPoster(filmID);
+                    String movieTitle = MovieDatabase.getTitle(filmID);
+                    int movieMinutes = MovieDatabase.getMinutes(filmID);
+                    int movieYear = MovieDatabase.getYear(filmID);
+                    String movieCountry = MovieDatabase.getCountry(filmID);
+                    String posterLink = MovieDatabase.getPoster(filmID);
 
-                if(posterLink.equals("N/A")) {
-                    posterLink = "http://icons.iconarchive.com/icons/danleech/simple/256/imdb-icon.png";
+                    if (posterLink.equals("N/A")) {
+                        posterLink = "http://icons.iconarchive.com/icons/danleech/simple/256/imdb-icon.png";
+                    }
+                    //  posterLink = "https://trashbox.ru/apk_icons/topic_11831_192.png"; }
+                    Element img = doc.createElement("img");
+                    Element figure = doc.createElement("figure");
+                    Element avg = doc.createElement("avg");
+                    Element p = doc.createElement("p");
+                    Element figcaption = doc.createElement("figcaption");
+
+                    figure.setAttribute("class", "movie");
+
+                    img.setAttribute("src", posterLink);
+                    img.setAttribute("width", "30%");
+
+                    p.appendChild(img);
+                    figure.appendChild(p);
+
+                    avg.setTextContent(String.valueOf(averageRatingValue));
+                    figcaption.setTextContent(String.valueOf(movieTitle));
+                    figure.appendChild(avg);
+                    figure.appendChild(figcaption);
+                    figcaption = doc.createElement("figcaption");
+                    figcaption.setTextContent(movieMinutes + " min, " + movieCountry + ", " + movieYear);
+
+                    figure.appendChild(figcaption);
+
+                    ul.appendChild(figure);
+
                 }
-                  //  posterLink = "https://trashbox.ru/apk_icons/topic_11831_192.png"; }
-                Element img = doc.createElement("img");
-                Element figure = doc.createElement("figure");
-                Element avg = doc.createElement("avg");
-                Element p = doc.createElement("p");
-                Element figcaption = doc.createElement("figcaption");
 
-                figure.setAttribute("class", "movie");
-
-                img.setAttribute("src", posterLink);
-                img.setAttribute("width", "30%");
-
-                p.appendChild(img);
-                figure.appendChild(p);
-
-                avg.setTextContent(String.valueOf(averageRatingValue));
-                figcaption.setTextContent(String.valueOf(movieTitle));
-                figure.appendChild(avg);
-                figure.appendChild(figcaption);
-                figcaption = doc.createElement("figcaption");
-                figcaption.setTextContent(movieMinutes +" min, " + movieCountry + ", "+ movieYear);
-
-                figure.appendChild(figcaption);
-
-                ul.appendChild(figure);
-
+                div.appendChild(h3);
+                div.appendChild(ul);
+                html.appendChild(div);
             }
-
-            div.appendChild(h3);
-            div.appendChild(ul);
+        } else {
+            String text1 = "Sorry, but your rates of movies was too low to recommend you another movies, or you don`t";
+            String text2 ="rate movies. Please rate some movies by better rating, or come back later with better mood";
+            String oopsImgURL = "http://cdn.onlinewebfonts.com/svg/download_453364.png";
+            Element div = doc.createElement("div");
+            Element figure = doc.createElement("figure");
+            Element img = doc.createElement("img");
+            Element figcaption1 = doc.createElement("figcaption");
+            Element figcaption2 =doc.createElement("figcaption");
+            figcaption1.setTextContent(text1);
+            figcaption2.setTextContent(text2);
+            img.setAttribute("src", oopsImgURL);
+            img.setAttribute("width", "30%");
+            figure.appendChild(img);
+            figure.appendChild(figcaption1);
+            figure.appendChild(figcaption2);
+            div.appendChild(figure);
             html.appendChild(div);
+
         }
+
 
         doc.appendChild(html);
         return doc;
     }
 
-    private Element getStyleElements(Document document ){
+    private Element getStyleElements(Document document) {
 
         String h3 = "h3\n" +
                 "{\n" +
@@ -219,7 +243,7 @@ public class RecommendationRunner implements Recommender {
 
 
         Element style = document.createElement("style");
-        style.setTextContent(h3+"\n" + div+"\n" + avg+"\n" +figure+"\n" );
+        style.setTextContent(h3 + "\n" + div + "\n" + avg + "\n" + figure + "\n");
 
         return style;
     }

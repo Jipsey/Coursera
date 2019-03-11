@@ -88,7 +88,6 @@ public class MovieRunnerSimilarRating {
                     .getTitle(similarRaters.get(i).getItem());
 
             System.out.println(movieTitle);
-
         }
     }
 
