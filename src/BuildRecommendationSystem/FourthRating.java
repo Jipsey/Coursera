@@ -98,6 +98,7 @@ public class FourthRating {
 
         ArrayList<Rating> similarityRaters = getSimilarities(id);
 
+        if(similarityRaters.size() >= numSimilarRaters)
         similarityRaters = new ArrayList<>(similarityRaters.subList(0, numSimilarRaters));
 
         for (String movieID : MovieDatabase.filterBy(new TrueFilter())) {

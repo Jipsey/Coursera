@@ -56,7 +56,7 @@ public class RecommendationRunner implements Recommender {
     public void printRecommendationsFor(String webRaterID) {
 
         ArrayList<Rating> similarRatings =
-                fourthRating.getSimilarRatings(webRaterID, 15, 5);
+                fourthRating.getSimilarRatings(webRaterID, 15, 3);
         HashMap<String, ArrayList<String>> movieGenreHashMap;
         Document doc;
         movieGenreHashMap = buildMapByGenre(webRaterID, similarRatings);
